@@ -1,0 +1,52 @@
+.container-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 40px;
+}
+
+@keyframes redtoyellow {
+  from {background-color: rgb(194, 60, 60);}
+  to {background-color: rgb(244, 221, 75);}
+}
+
+.redyellow {
+  animation-name: redtoyellow;
+  animation-duration: 4s;
+  background-color: rgb(194, 60, 60);
+  width: 200px;
+  height: 100px;
+  animation-iteration-count: infinite
+}
+
+
+@keyframes greenandblue {
+  0% {background-color: rgb(31, 160, 52);}
+  50% {background-color: rgb(69, 135, 189);}
+  100% {background-color: rgb(31, 160, 52);}
+}
+
+.greenblue {
+  animation-name: greenandblue;
+  animation-duration: 6.7s;
+  background-color: rgb(31, 160, 52);
+  border-radius: 50px;
+  height: 100px;
+  width: 200px;
+  animation-iteration-count: infinite
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+.spinsquare {
+  animation-name: spin;
+  animation-duration: 5s;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(95, 45, 120);
+  animation-iteration-count: infinite
+}
