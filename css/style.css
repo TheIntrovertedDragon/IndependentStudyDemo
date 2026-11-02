@@ -1,6 +1,6 @@
 .container-grid {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 40px;
 }
@@ -36,17 +36,50 @@
   animation-iteration-count: infinite
 }
 
+
 @keyframes spin {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
-
 
 .spinsquare {
   animation-name: spin;
   animation-duration: 5s;
   height: 100px;
   width: 100px;
-  background-color: rgb(95, 45, 120);
+  background-color: rgb(215, 155, 105);
   animation-iteration-count: infinite
+}
+
+
+@keyframes pinkpurpleblue {
+  0% {background-color: rgb(152, 51, 151);}
+  25% {background-color: rgb(108, 51, 152);}
+  50% {background-color: rgb(32, 30, 125);}
+  75% {background-color: rgb(108, 51, 152);}
+  100% {background-color: rgb(152, 51, 151);}
+}
+
+.coolspinsquare {
+  /*name | duration| time-duration | iterations*/
+  animation: spin 0.5s linear infinite, pinkpurpleblue 5s linear infinite;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(152, 51, 151);
+}
+
+/*not working*/
+@keyframes slide {
+  0% {transform: translateX(0);}
+  50% {transform: translateX(200px);}
+  100% {transform: translateX(0);}
+}
+
+.sliding {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(200, 114, 134);
 }
